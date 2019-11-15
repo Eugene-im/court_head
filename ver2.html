@@ -1,0 +1,221 @@
+<body lang="en">
+
+    <head>
+
+        <link rel="stylesheet" href="https://7aac.gov.ua/wp-content/themes/7aac/css/style.css">
+        <link rel="stylesheet" href="https://7aac.gov.ua/wp-content/themes/7aac/css/nowebp.css">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon"
+            href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+        <link rel="mask-icon" type=""
+            href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+            color="#111">
+        <title>CodePen - Parallax Card</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                -webkit-perspective: 1000px;
+                perspective: 1000px;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                position: relative;
+                background-color: #111;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 700px;
+                min-height: 350px;
+                border-radius: 20px;
+                position: relative;
+                transition: 1.5s ease-in-out;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                margin-bottom: 50px;
+            }
+
+            .side {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                padding: 20px 50px;
+                color: #fff;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-radius: 20px;
+            }
+
+            .cont {
+                -webkit-transform: translatez(70px) scale(0.8);
+                transform: translatez(70px) scale(0.8);
+                line-height: 1.5em;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+
+            .front {
+                z-index: 2;
+                background-color: #333;
+            }
+
+            .back {
+                background-color: #333;
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+                z-index: 0;
+                padding-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .back .cont {
+                flex-direction: column;
+                -webkit-transform: translatez(70px) scale(1);
+                transform: translatez(70px) scale(1);
+
+            }
+
+            .container:hover {
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+
+            .flag {
+                width: 100px;
+                height: 120px;
+                background: url("https://7aac.gov.ua/wp-content/themes/7aac/img/logo_svg/1.svg") no-repeat top right;
+                background-size: 100% auto;
+                display: block;
+                transition: 1.5s ease-in-out;
+                transform-style: preserve-3d;
+                margin: 8px auto;
+                z-index: 1;
+            }
+
+            .photo {
+                max-width: 250px;
+                width: 100%;
+                overflow: hidden;
+                /* max-height: ; */
+            }
+
+            .photo img {
+                width: 100%;
+                /* height: 100%; */
+            }
+
+            .wrp {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+
+    <body translate="no">
+        <div class="content">
+            <div class="wrp">
+                <div class="container">
+                    <div class="front side">
+                        <div class="cont">
+                            <div class="photo">
+                                <img src="https://7aac.gov.ua/wp-content/uploads/2019/05/Kuzmyshyn.jpg" alt=""
+                                    srcset="">
+                            </div>
+                            <div class="content_zone">
+                                <span class="flag"></span>
+                                <h3 class="card_title">Кузьмишин Віталій Миколайович</h3>
+                                <div>Голова</div>
+                                <div>Сьомого апеляційного адміністративного суду</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back side">
+                        <div class="cont">
+                            <div>
+                                <a href="#">
+                                    Біографія
+                                </a>
+                            </div>
+                            <div class="footer__menu__item__text">
+                                </br>
+                                </br>
+                                </br>
+                                <span class="footer__menu__item__text_small">Напиcати:</span>
+                                <a href="https://t.me/VAAS_info_bot" rel="noreferrer">
+                                    <i class="icon icon_s_telegram_g"></i>
+                                </a>
+                                <a class="social_m" href="viber://add?number=380688417844">
+                                    <i class=" icon icon_s_viber_g"></i>
+                                </a>
+                                </br>
+                                <a class="footer__menu__item__text_imp"
+                                    href="https://cause.7aac.gov.ua/cause/2/">inbox@7aa.court.gov.ua</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container second">
+                    <div class="front side">
+                        <div class="cont">
+                            <div class="photo">
+                                <img src="https://7aac.gov.ua/wp-content/uploads/2019/05/Sovgira-1.jpg" alt=""
+                                    srcset="">
+                            </div>
+                            <div class="content_zone">
+                                <span class="flag"></span>
+                                <h3 class="card_title">Совгира Дмитро Іванвич</h3>
+                                <div>Заступник голови</div>
+                                <div>Сьомого апеляційного адміністративного суду</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back side">
+                        <div class="cont">
+                            <div>
+                                <a href="#">
+                                    Біографія
+                                </a>
+                            </div>
+                            <div class="footer__menu__item__text">
+                                </br>
+                                </br>
+                                </br>
+                                <span class="footer__menu__item__text_small">Напиcати:</span>
+                                <a href="https://t.me/VAAS_info_bot" rel="noreferrer">
+                                    <i class="icon icon_s_telegram_g"></i>
+                                </a>
+                                <a class="social_m" href="viber://add?number=380688417844">
+                                    <i class=" icon icon_s_viber_g"></i>
+                                </a>
+                                </br>
+                                <a class="footer__menu__item__text_imp"
+                                    href="https://cause.7aac.gov.ua/cause/2/">inbox@7aa.court.gov.ua</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</body>
